@@ -1,0 +1,53 @@
+javascript - 
+HTML - design  ---> static website  (no user interaction)
+CSS - styling  (CSS media query )
+
+functionality / behaviour  -> dynamic website (where user can interact) => javascript 
+
+logics - 
+
+ECMA Script standard 
+ES5 
+
+ES6 (ES2015) - 
+ES6 features -
+1. let and const keywords
+2. template string 
+3. rest parameter and spread operator
+4. destructuring assignment 
+5. enhanced object literal
+6. arrow function
+7. class and inheritance 
+8. promise object 
+9. module 
+10. async and await keywords
+Array object 
+======================================================
+javascript run outside the browser - 
+console object 
+
+Add two numbers - 10 and 20 
+
+nodejs - run time environment for executing javascript outside the browser. using nodejs we can use javascript at server side.
+
+npm - node package manager 
+
+-===============
+
+variable - container , hold the value
+
+===============================================
+function - block of code to perform a specific task.
+
+function functionname(){ //function definition / body 
+    //stmt
+}
+
+functionname() // function calling 
+
+functionname()
+
+=========================================================
+// object - any entity which have some properties and functionalities.
+1. builtin object - Array object 
+2. user defined objects

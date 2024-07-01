@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Web Page</title>
+    <style>
+        label{
+            display: inline-block;
+            width:150px }
+        *{ margin-bottom: 5px; }
+        .wh{ width:170px }
+    </style>
+</head>
+<body><h1>Register Here</h1><hr/>
+    <form method="post" autocomplete="off">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" placeholder="enter username" required pattern="[a-zA-Z]+"/><br/>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email"/><br/>
+      <label for="username">Password</label>
+        <input type="password" name="password" id="password" required minlength="6" maxlength="20"/><br/>
+        <label for="cpassword">confirm Password</label>
+        <input type="password" name="cpassword" id="cpassword"/><br/>
+        <label for="mobile">Mobile</label>
+        <input type="number" name="mobile" class="wh" id="mobile" min="10" max="90"/><br/>
+        <label for="mobile">DOB</label>
+        <input type="date" name="dob" id="dob" class="wh"/><br/>
+        <label for="gender">gender</label>
+        <input type="radio" name="gender" value="male"/>Male
+        <input type="radio" name="gender" value="female"/>Female
+        <input type="radio" name="gender" value="other"/>Other<br/>
+        <label for="mobile">City</label>
+        <select name="city" class="wh">
+            <option value="" selected disabled>choose city</option>
+            <option>Ahmedabad</option>
+            <option>Pune</option>
+            <option>Mumbai</option>
+            <option>Kota</option>
+            <option>Surat</option>
+        </select><br/>
+        <label for="address">Address</label>
+        <textarea name="address" class="wh"></textarea><br/>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

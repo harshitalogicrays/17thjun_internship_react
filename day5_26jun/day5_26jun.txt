@@ -1,0 +1,120 @@
+promise object 
+async and await 
+bootstrap 
+reactjs - intro 
+
+====================================
+Promise object -  asynchronous javascript object.
+
+synchronous vs asynchronous - 
+
+client -- request ----server 
+server --- response ---- client 
+
+client -- request ----server 
+server --- response ---- client 
+php 
+
+
+client ---- request ---- server  (background)
+client ---- request -----
+
+====================================================================
+
+Promise object -  asynchronous javascript object.
+promise is always futuristic. 
+
+1. create promise /produce promise
+2. consume promise
+
+1. pending state 
+2. success / fullfilled / resolve 
+3. fail  / not fullfilled / reject
+
+//promise create
+let count = 1
+let p = new Promise((resolve,reject)=>{
+    if(count  <= 10)
+        resolve()
+    else 
+        reject()
+})
+
+//promise consume
+p.then(()=>{ console.log("promise resolved")})
+ .catch(()=>{console.log("promise rejected")})
+
+ =================================
+
+
+ async and await - 
+
+ async function fun(){
+ // by default returns a promise object
+ }
+
+
+ =================================================================
+ reactjs - javascript library for building dynamic UI.
+
+ collections of functions
+ flexible 
+
+ 1. SPA (single page application) - index.html
+ 2. components - functions/class (return html code + javascript code => JSX ) 
+.js or .jsx file - export and import 
+ reusability 
+3. virtual DOM  - react fiber 
+
+ instagram 
+
+nodejs - npm (node package manager)
+
+=========================================================================
+components - 
+function fun(){
+	return "hello"
+}
+fun()
+
+function Fun(){
+return(
+	<h1>Hello</h1>
+)
+}
+<Fun></Fun> or <Fun/>
+
+
+first letter capital of component.
+component returns jsx.
+html tags small case. 
+all tags should be paired . 
+<br></br> or <br/>
+
+
+div id="root" --> App (parent component) ---> 
+
+
+<> </> => React Fragment
+====================================================
+bootstrap - grid system , forms 
+install bootstrap
+git and github push 
+props 
+events 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

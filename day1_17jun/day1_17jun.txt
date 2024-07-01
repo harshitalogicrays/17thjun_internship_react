@@ -1,0 +1,77 @@
+1months - 12 to 13 sessions 
+MWF - 4 to 5:30 
+
+HTML and CSS  - 
+
+text editor - visual studio code 
+
+===================================================
+
+website  -  CRUD operation 
+Add/create  - post HTTP request - json server 
+Read  -  get HTTP request 
+Update - PUT HTTP request
+delete -  DELETE HTTP Request
+
+==============================================
+
+Design -> HTML 
+Styling -> CSS 
+
+types of tags - 
+1. container /paired - h1, div, span, form, button, a , li,ul,table etc.
+2. non container / empty - br, hr, link,img, input etc.
+
+======================================
+Form - 
+register - username, email, password, confirm password, mobileno, dob , gender ,city, address
+<form>
+	
+</form>
+
+
+<html></html> or <html/>
+<br> or <br/> (self closing tag)
+
+In reactjs all the tags are paired. 
+<br></br> or <br/> 
+
+get method - data goes as query string . appended to the address bar /url.
+post method - data append HTTP request 
+
+validations -
+1. required
+2. minlength
+3. maxlength 
+4. min
+5. max
+6. pattern 
+
+==========================================================
+
+<table>
+    <thead>
+        <tr>
+            <th>Sr. No</th> // bold and center align
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>DOB</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+     <tr>
+         <td></td> //regular font and left align
+     </tr>
+    </tbody>
+    <tfoot></tfoot>
+</table>
+
+==============================================
+Wednesday and Friday- 
+javascript - ES6 features  and bootstrap 
+
+behaviour / functionalitities 
+
+

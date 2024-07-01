@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter Size</label>
+    <input type="text" id="size"/>
+    <button type="button" onclick="createarray()">create array</button><br/>
+    <div id="arraydata"></div>
+
+    <script>
+        let createarray = ()=>{
+            let size =parseInt(document.getElementById('size').value) //"4" - string data type
+                //parseInt("4") => 4
+            // alert(size)  
+            let arr = new Array(size)
+            for(let i=0;i<size;i++){
+                arr[i] = prompt(`enter index ${i} value`,0) //string 
+            }
+            document.getElementById("arraydata").innerHTML = arr
+        }
+    </script>
+</body>
+</html>

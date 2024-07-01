@@ -1,0 +1,36 @@
+Array - collection of values
+
+let arr = ['hello',12,4.3,true,null,undefined, [] , {} , [{},{},{}] ]
+
+let arr1 = new Array('hello',12,4.3,true,null,undefined, [] , {} , [{},{},{}] )
+
+array index - starts with 0
+
+=======================================================================
+
+arr.forEach((val,index)=>{})
+
+()=>{} => callback function
+
+=========================================================================
+
+rest parameter - 
+
+========================================================================
+OOPS concepts - data security
+
+data store -> structure / union -> global 
+object  - any entity which have some properties and functionality.
+class - template / blueprint for creating object 
+
+4 major pillars -
+1. Data encapsulation - wrap data and function into a single unit  
+2. Data Abstraction - data hiding 
+3. polymorphism - function overloading , function overriding 
+4. inheritance - parent child 
+
+
+
+default export - in 1 page only 1 default export
+
+named export - more than 1 in 1 page

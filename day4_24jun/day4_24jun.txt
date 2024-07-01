@@ -1,0 +1,45 @@
+promise object 
+async and await 
+bootstrap 
+reactjs - intro 
+
+====================================
+Promise object -  asynchronous javascript object.
+
+synchronous vs asynchronous - 
+
+client -- request ----server 
+server --- response ---- client 
+
+client -- request ----server 
+server --- response ---- client 
+php 
+
+
+client ---- request ---- server  (background)
+client ---- request -----
+
+====================================================================
+
+Promise object -  asynchronous javascript object.
+promise is always futuristic. 
+
+1. create promise /produce promise
+2. consume promise
+
+1. pending state 
+2. success / fullfilled / resolve 
+3. fail  / not fullfilled / reject
+
+//promise create
+let count = 1
+let p = new Promise((resolve,reject)=>{
+    if(count  <= 10)
+        resolve()
+    else 
+        reject()
+})
+
+//promise consume
+p.then(()=>{ console.log("promise resolved")})
+ .catch(()=>{console.log("promise rejected")})

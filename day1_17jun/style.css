@@ -1,0 +1,16 @@
+.linkset{
+    text-decoration: none;
+}
+
+.linkset:hover{
+    background-color: cadetblue;
+}
+
+#list{
+    list-style-type: lower-alpha;
+    list-style-position: inside;
+}
+
+li{
+    border: 1px solid black;
+}

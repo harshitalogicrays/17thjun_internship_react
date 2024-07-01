@@ -1,0 +1,7 @@
+children props - 
+
+  <Propsmore username="Harshita" phone={908765432}>
+        <h1>heading tag</h1>
+        <Griddemo></Griddemo>
+        <p>paragragh tag</p>
+      </Propsmore>
