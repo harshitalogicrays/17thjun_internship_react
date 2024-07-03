@@ -1,0 +1,12 @@
+let user={username:'',email:'',mobile:'',password:'',cpassword:''}
+
+
+products - 
+
+condition -
+1. ternary operator - ?:
+
+condition ? true : false 
+
+2. short circuit operator - &&  (simple if)
+condition && true 

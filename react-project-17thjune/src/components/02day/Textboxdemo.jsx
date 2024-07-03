@@ -13,7 +13,9 @@ const Textboxdemo = () => {
                 <div className='mb-3 row'>
                     <div className="col-3"><label htmlFor="username" className='form-label'>Username</label></div>
                    
-                    <div className="col-9"><input type='text' name="username" className='form-control' value={username} 
+                    <div className="col-9">
+                        <input type='text' name="username" className='form-control' 
+                        value={username} 
                     onChange={(e)=>setUsername(e.target.value)
                     }/></div>                
                 </div>
