@@ -3,6 +3,8 @@ import EventDemo from "./components/02day/EventDemo"
 import Propsmore from "./components/02day/Propsmore"
 import Textboxdemo from "./components/02day/Textboxdemo"
 import Form1 from "./components/03day/Form1"
+import Product from "./components/04day/Product"
+import ReactHookFormDemo from "./components/04day/ReactHookFormDemo"
 import FormDemo from "./components/FormDemo"
 import Griddemo from "./components/Griddemo"
 
@@ -32,8 +34,9 @@ function App() {
       {/* <BSForm/> */}
       {/* <Textboxdemo /> */}
 
-      <Form1/>
-    
+      {/* <Form1/> */}
+        {/* <Product/> */}
+        <ReactHookFormDemo/>
       </div>
     </>
   )
