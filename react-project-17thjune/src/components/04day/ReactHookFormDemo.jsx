@@ -4,8 +4,17 @@ import { useForm } from 'react-hook-form'
 
 const ReactHookFormDemo = () => {
     const {register,handleSubmit , formState: { errors } , trigger ,getValues}=useForm()
-    let formData=(user)=>{
-        alert(JSON.stringify(user))}
+    let formData=async(user)=>{
+        // alert(JSON.stringify(user))
+            try{
+                await fetch("http://localhost:1000/users",{
+                    method:"POST",
+                    headers:{'content-type':'application/json'},
+                    body:JSON.stringify(user)
+                })
+            }
+            catch(error){console.log(error)}
+    }   
   return (
     <div className='container mt-5'>
         <div className="row">

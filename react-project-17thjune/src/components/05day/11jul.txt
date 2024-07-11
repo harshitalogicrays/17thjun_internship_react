@@ -1,0 +1,8 @@
+let user = {username:'',email:'',age:20,}
+
+{"username":'',"email":'',"age":20,}
+
+Javascript object to JSON string - JSON.stringify()
+JSON string to Javascript object - JSON.parse()
+
+local json server 

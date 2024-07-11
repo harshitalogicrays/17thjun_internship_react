@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "id": "fbbc",
+      "username": "happy",
+      "email": "happy@gmail.com",
+      "mobile": "9876543210",
+      "password": "Happy@123",
+      "cpassword": "Happy@123"
+    }
+  ],
+  "products": [],
+  "orders": [],
+  "Cart": []
+}
