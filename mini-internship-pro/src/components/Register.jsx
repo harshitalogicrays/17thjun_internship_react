@@ -2,13 +2,13 @@ import React from 'react'
 import Image1 from '/src/assets/images/register.png'
 import { useForm } from 'react-hook-form'
 import {toast} from 'react-toastify'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 const Register = () => {
   const {register,handleSubmit , formState: { errors } , trigger ,getValues}=useForm()
   const redirect=useNavigate()
   let formData=async(user)=>{
           try{
-              await fetch("http://localhost:1000/users",{
+              await fetch(`${import.meta.env.VITE_URL}/users`,{
                   method:"POST",
                   headers:{'content-type':'application/json'},
                   body:JSON.stringify({...user,role:'1',createdAt:Date.now()})               
@@ -79,6 +79,7 @@ return (
           <button type="submit" className="btn btn-primary"  > Submit  </button>
           
           </form>
+          <p>Already an account??<Link to='/signin'>Login</Link> </p>
           </div>
       </div>
   </div>

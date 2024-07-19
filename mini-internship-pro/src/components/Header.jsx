@@ -1,8 +1,31 @@
-import React from 'react'
-import { FaPenAlt, FaSearch } from "react-icons/fa";
+import React, { useEffect, useState } from 'react'
+import { FaPenAlt, FaSearch,FaArrowCircleLeft,FaShoppingCart  } from "react-icons/fa";
 import { FaLock } from 'react-icons/fa6';
-import {  NavLink } from 'react-router-dom';
+import {  Link, NavLink, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { ShowOnLogin, ShowOnLogout } from './HiddenLinks';
 const Header = () => {
+  const [username,setUsername]=useState("Guest")
+  const redirect=useNavigate()
+
+  useEffect(()=>{
+      if(sessionStorage.getItem("17thjun_project") != null){
+          let obj=JSON.parse(sessionStorage.getItem("17thjun_project"))
+          setUsername(obj.name)
+      }
+      else {
+        setUsername("Guest")
+      }
+  },[sessionStorage.getItem("17thjun_project")])
+
+  let handleLogout=()=>{
+    if(window.confirm('are you sure to logout')){
+        sessionStorage.removeItem("17thjun_project")
+        toast.success("LoggedOut Successfully")
+        redirect('/')
+    }
+
+  }
   return (
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
     <div class="container-fluid">
@@ -57,17 +80,7 @@ const Header = () => {
           }}
         > contact Us </NavLink>
           </li>
-          {/* <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"/></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li> */}
+
         </ul>
         <form class="d-flex" role="search">
           <div className="input-group">
@@ -77,6 +90,7 @@ const Header = () => {
         
         </form>
         <ul class="navbar-nav  mb-2 mb-lg-0">
+          <ShowOnLogout>
           <li class="nav-item">
           <NavLink to="/signup" className="nav-link"
           style={({ isActive}) => {
@@ -99,6 +113,17 @@ const Header = () => {
           }}
         > <FaLock/> SignIn </NavLink>
           </li>
+          </ShowOnLogout>
+          <ShowOnLogin>
+          <li class="nav-item"><Link className="nav-link" to='/cart'><FaShoppingCart size={30}/>
+          <span class="badge rounded-pill text-bg-danger">0</span >
+          
+           </Link></li>
+          <li class="nav-item"><a className="nav-link"> Welcome {username} </a></li>
+          <li class="nav-item"><button className="nav-link" 
+          onClick={handleLogout}><FaArrowCircleLeft />
+          Logout </button></li>
+          </ShowOnLogin>
         </ul>
       </div>
     </div>

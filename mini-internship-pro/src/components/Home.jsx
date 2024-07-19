@@ -1,9 +1,12 @@
 import React from 'react'
+import Slider from './Slider'
+import Product from './Product'
 
 const Home = () => {
   return (
-    <>
-        <h1>Home Page</h1>
+    <>  
+      <Slider/><hr/>
+        <Product/>
     </>
   )
 }
