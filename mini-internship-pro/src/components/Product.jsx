@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import ProductList from './ProductList'
+import { MyContext } from './Context'
 const Product = () => {
   const [products,setProducts]=useState([])
   useEffect(()=>{ getdata() },[])

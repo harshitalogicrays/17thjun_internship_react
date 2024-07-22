@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom"
 import Header from "./components/Header"
 import { ToastContainer } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
+import Context from "./components/Context";
 
 function App() {
   return (
@@ -18,8 +19,10 @@ function App() {
     pauseOnHover={false}
     theme="colored"
     />
-  <Header/>
-  <Outlet/>
+    <Context>
+          <Header/>
+          <Outlet/>
+    </Context>
  </>
   )
 }

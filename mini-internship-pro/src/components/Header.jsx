@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { FaPenAlt, FaSearch,FaArrowCircleLeft,FaShoppingCart  } from "react-icons/fa";
 import { FaLock } from 'react-icons/fa6';
 import {  Link, NavLink, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { ShowOnLogin, ShowOnLogout } from './HiddenLinks';
+import { MyContext } from './Context';
 const Header = () => {
+  const data=useContext(MyContext)
+
   const [username,setUsername]=useState("Guest")
   const redirect=useNavigate()
 
@@ -25,6 +28,13 @@ const Header = () => {
         redirect('/')
     }
 
+  }
+
+
+  let [search,setSearch]=useState('')
+  let handleSearch=(e)=>{
+    e.preventDefault()
+    data.filterbysearch(search)
   }
   return (
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -84,8 +94,9 @@ const Header = () => {
         </ul>
         <form class="d-flex" role="search">
           <div className="input-group">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search"/>
-            <button class="btn btn-danger " type="submit"><FaSearch /></button>
+            <input class="form-control" type="search" placeholder="Search" 
+            name={search} onChange={(e)=>setSearch(e.target.value)}/>
+            <button class="btn btn-danger " type="submit" onClick={handleSearch}><FaSearch /></button>
           </div>
         
         </form>
@@ -116,7 +127,7 @@ const Header = () => {
           </ShowOnLogout>
           <ShowOnLogin>
           <li class="nav-item"><Link className="nav-link" to='/cart'><FaShoppingCart size={30}/>
-          <span class="badge rounded-pill text-bg-danger">0</span >
+          <span class="badge rounded-pill text-bg-danger">{data.cart.length}</span >
           
            </Link></li>
           <li class="nav-item"><a className="nav-link"> Welcome {username} </a></li>
